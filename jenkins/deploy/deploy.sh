@@ -10,5 +10,5 @@ sshpass -p '1234' ssh -o StrictHostKeyChecking=no production@192.168.100.110 << 
     docker login -u suraphop -p $PASS
     docker stop $IMAGE || true && docker rm $IMAGE || true
     docker pull suraphop/$IMAGE:$BUILD_TAG
-    docker run --restart=always -d --name $IMAGE suraphop/$IMAGE:$BUILD_TAG
+    docker run --restart=always -d --publish 8000:8000 --name $IMAGE suraphop/$IMAGE:$BUILD_TAG 
 ENDSSH
