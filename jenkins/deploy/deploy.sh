@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "***************************"
-echo "** deploy to production v.1.0***"
+echo "** deploy to production v.1.0.0***"
 echo "***************************"
 
 IMAGE="machine-data-project"
